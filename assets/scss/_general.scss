@@ -51,6 +51,7 @@
   i {
     font-size: 1.2rem;
   }
+
 }
 
 .border-bottom-2 {
@@ -103,6 +104,7 @@
   height: calc(1.5em + 0.75rem + 10px) !important;
 }
 
+
 .dt-bootstrap4 {
   .buttons-collection {
     background-color: $blue;
@@ -111,6 +113,7 @@
     > span > i > span {
       font-family: $font-family-sans-serif;
     }
+
   }
 
   .dataTables_length, .dataTables_filter {
