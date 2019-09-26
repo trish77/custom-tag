@@ -10,17 +10,19 @@ $yellow: #ffc107 !default;
 $green: #5cb85c !default;
 $teal: #20c997 !default;
 $cyan: #09c !default;
+$dkgrey: #212529 !default;
+$grey: #ccc !default;
 
 $btn-font-weight: normal;
 
 
-$btn-default-color: #333;
-$btn-default-bg: #fff;
-$btn-default-border: #ccc;
+$btn-default-color: $dkgrey;
+$btn-default-bg: $grey;
+$btn-default-border: $dkgrey;
 
 $btn-primary-color: #fff;
-
-$dropdown-link-color:               $blue !default;
+$btn-primary-bg: $green;
+$dropdown-link-color:  $blue !default;
 
 
 $font-size-base: .89rem !default; // Assumes the browser default, typically `16px`
@@ -48,9 +50,9 @@ $font-family-sans-serif: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe 
 
 // Default appears as grey
 .btn-default {
-  color: $btn-default-color !important;
+  color: $dkgrey !important;
   background: $btn-default-bg !important;
-  border: 1px solid $btn-default-border !important;
+  border: $grey !important;
 }
 
 .toggle-split {

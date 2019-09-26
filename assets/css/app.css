@@ -9,9 +9,9 @@
 }
 
 .btn-default {
-  color: #333 !important;
-  background: #fff !important;
-  border: 1px solid #ccc !important;
+  color: #212529 !important;
+  background: #ccc !important;
+  border: #ccc !important;
 }
 
 .toggle-split {
@@ -10577,6 +10577,35 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
+.btn-outline-secondary {
+  color: #6c757d;
+  border-color: #dee2e6;
+}
+
+.nav-link {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.btn-default {
+  color: #212529 !important;
+  background: #ccc !important;
+  border: #ccc !important;
+}
+
+.toggle-split {
+  border-left: 1px solid #ccc;
+}
+
+.dropdown-toggle-split {
+  border-right: 1px solid #ccc !important;
+  margin-right: 20px;
+}
+
+.dropdown-toggle-split::after {
+  margin-left: 20px !important;
+}
+
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
@@ -10630,6 +10659,16 @@ a.text-dark:hover, a.text-dark:focus {
   font-size: 1.2rem;
 }
 
+.btn-accent, .btn-danger, .btn-default, .btn-focus, .btn-info, .btn-inverse, .btn-primary, .btn-success, .btn-warning {
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.btn-default:focus, .btn-default:hover {
+  background-color: #e0e0e0 !important;
+}
+
 .border-bottom-2 {
   border-bottom: 2px solid #ced4da !important;
 }
@@ -10679,9 +10718,16 @@ a.text-dark:hover, a.text-dark:focus {
   height: calc(1.5em + 0.75rem + 10px) !important;
 }
 
+.page-item.active .page-link {
+  z-index: 1;
+  background-color: #ccc;
+  color: #212529;
+  border: #212529;
+}
+
 .dt-bootstrap4 .buttons-collection {
-  background-color: #09c;
-  border: none;
+  /* background-color: inherit;
+    border: inherit;*/
 }
 
 .dt-bootstrap4 .buttons-collection > span > i > span {

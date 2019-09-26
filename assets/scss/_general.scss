@@ -1,4 +1,5 @@
-// General Style
+@import "bootstrap_variable_overrides";
+
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
@@ -53,6 +54,16 @@
   }
 
 }
+.btn-accent, .btn-danger, .btn-default, .btn-focus, .btn-info, .btn-inverse, .btn-primary, .btn-success, .btn-warning {
+  text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075);
+}
+
+.btn-default:focus, .btn-default:hover {
+  background-color: #e0e0e0 !important;
+
+}
 
 .border-bottom-2 {
   border-bottom: 2px solid #ced4da !important;
@@ -103,17 +114,21 @@
 .search-bar {
   height: calc(1.5em + 0.75rem + 10px) !important;
 }
-
+.page-item.active .page-link {
+  z-index: 1;
+  background-color: $grey;
+  color: $dkgrey;
+  border: $dkgrey;
+}
 
 .dt-bootstrap4 {
   .buttons-collection {
-    background-color: $blue;
-    border: none;
+   /* background-color: inherit;
+    border: inherit;*/
 
     > span > i > span {
       font-family: $font-family-sans-serif;
     }
-
   }
 
   .dataTables_length, .dataTables_filter {

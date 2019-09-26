@@ -1,278 +1,297 @@
 <!doctype html>
 <html lang="en">
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="favicon.ico">
-
-    <title>View Custom Tags</title>
-
-    <!-- Icons for this template -->
-    <link href="assets/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="assets/css/app.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/datatables.min.css" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-
-  </head>
-
-  <body>
-
-    <div class="head-back"></div>
-
-    <div class="container-fluid">
-      <div class="row mt-1 title mb-1 border-bottom border-secondary border-bottom-2 flex-xl-nowrap">
-        <div class="col-6">
-          <h3>View Custom Tags</h3>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="favicon.ico">
+  <title>View Custom Tags</title>
+  <!-- Icons for this template -->
+  <link href="assets/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/app.css" type="text/css">
+  <link rel="stylesheet" href="assets/css/datatables.min.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+</>
+<body>
+<div class="-back"></div>
+<div class="container-fluid">
+  <div class="row mt-1 title mb-1 border-bottom border-secondary border-bottom-2 flex-xl-nowrap">
+    <div class="col-6">
+      <h3>View Custom Tags</h3>
+    </div>
+    <div class="col-6 text-right pt-3">
+      <i class="fa fa-chevron-left ml-2"></i>
+      <a href="">Return to Tools</a>
+    </div>
+  </div>
+  <!-- #region Filter section -->
+  <div class="row flex-xl-nowrap">
+    <div class="border-right sidebar-wrapper">
+      <section>
+        <h4>Refine Results</h4>
+        <!-- <div class="px-4">
+           <div class="badge badge-info">Fire
+             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+             </button>
+           </div>
+           <div class="badge badge-info">Safety
+             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+             </button>
+           </div>
+         </div>-->
+        <h5 class="px-4 mt-3">Tag Type</h5>
+        <div class="mx-4">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheckDisabled1" disabled>
+            <label class="custom-control-label" for="customCheckDisabled1">Audience</label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheckDisabled1" disabled>
+            <label class="custom-control-label" for="customCheckDisabled1">Setting</label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheckDisabled1" disabled>
+            <label class="custom-control-label" for="customCheckDisabled1">Speciality</label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheckDisabled1" disabled>
+            <label class="custom-control-label" for="customCheckDisabled1">Subject</label>
+          </div>
+          <h6 class="mt-3">Taggable Items</h6>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheckDisabled1" disabled>
+            <label class="custom-control-label" for="customCheckDisabled1">Select All</label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheckDisabled1" disabled>
+            <label class="custom-control-label" for="customCheckDisabled1">
+              <i class="fa fa-book"></i>
+              Courses</label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheckDisabled1" disabled>
+            <label class="custom-control-label" for="customCheckDisabled1">
+              <i class="fa fa-list-alt"></i>
+              Course Bundles</label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheckDisabled1" disabled>
+            <label class="custom-control-label" for="customCheckDisabled1">
+              <i class="fa fa-book"></i>
+              Curricula
+            </label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheckDisabled1" disabled>
+            <label class="custom-control-label" for="customCheckDisabled1">
+              <i class="fa fa-check-square-o"></i>
+              Equivalents</label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheckDisabled1" disabled>
+            <label class="custom-control-label" for="customCheckDisabled1">
+              <i class="fa fa-book"></i>
+              Moc Curriculum</label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheckDisabled1" disabled>
+            <label class="custom-control-label" for="customCheckDisabled1">
+              <i class="fa fa-user-md"></i>
+              Live Classroom
+            </label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheckDisabled1" disabled>
+            <label class="custom-control-label" for="customCheckDisabled1">
+              <i class="fa fa-user-md"></i>
+              Profile Actvities</label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheckDisabled1" disabled>
+            <label class="custom-control-label" for="customCheckDisabled1">
+              <i class="fa fa-user-md"></i>
+              Simulation Topic
+            </label>
+          </div>
         </div>
-        <div class="col-6 text-right pt-3">
-          <i class="fa fa-chevron-left ml-2"></i>
-          <a href="">Return to Tools</a>
+      </section>
+    </div>
+    <!-- #endregion -->
+    <!-- #region Main section search and results -->
+    <div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5" role="main">
+      <div class="input-group mb-3">
+        <input type="text" class="form-control search-bar" aria-label="Text input with dropdown button">
+        <div class="input-group-append">
+          <button class="btn border btn-success" type="button" id="button-addon2">
+            <i class="fa fa-search"></i>
+          </button>
         </div>
       </div>
-
-      <!-- #region Filter section -->
       <div class="row flex-xl-nowrap">
-        <div class="border-right sidebar-wrapper">
-          <section>
-            <h4>Refine Results</h4>
+        <!-- #region search results table -->
+        <table class="course-table table table-striped">
+          <thead>
+          <tr class="mb-2">
+            <th scope="col">Custom Tag</th>
+            <th scope="col">Type</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr class="mb-2">
+            <td>
+              <h4>
+                <a .dt-bootstrap4 .dataTables_infohref="#" data-target="#modal-goal-add" style="margin:auto;" class="related" data-toggle="modal">
+                  ACME Initiatives
+                </a>
+              </h4>
+            </td>
+            <td>
+              <p>Subject</p>
+            </td>
+          </tr>
+          <tr class="mb-2">
+            <td>
+              <h4>
+                <a href="#" data-target="#modal-goal-add" style="margin:auto;" class="related" data-toggle="modal">
+                  Administration
+                </a>
+              </h4>
+            </td>
+            <td>
+              <p>Audience</p>
+            </td>
+          </tr>
+          <tr class="mb-2">
+            <td>
+              <h4>
+                <a href="#" data-target="#modal-goal-add" style="margin:auto;" class="related" data-toggle="modal">
+                  Bedside+ Initiative
+                </a>
+              </h4>
+            </td>
+            <td>
+              <p>Subject</p>
+            </td>
+          </tr>
+          <tr class="mb-2">
+            <td>
+              <h4>
+                <a href="#" data-target="#modal-goal-add" style="margin:auto;" class="related" data-toggle="modal">
+                  BedsidePlus Initiative
+                </a>
+              </h4>
+            </td>
+            <td>
+              <p>Subject</p>
+            </td>
+          </tr>
+          <tr class="mb-2">
+            <td>
+              <h4>
+                <a href="#" data-target="#modal-goal-add" style="margin:auto;" class="related" data-toggle="modal">
+                  CardioThoracic Nursing
+                </a>
+              </h4>
+            </td>
+            <td>
+              <p>Speciality</p>
+            </td>
+          </tr>
+          <tr class="mb-2">
+            <td>
+              <h4>
+                <a href="#" data-target="#modal-goal-add" style="margin:auto;" class="related" data-toggle="modal">
+                  CardioSim Express
+                </a>
+              </h4>
+            </td>
+            <td>
+              <p>Setting</p>
+            </td>
+          </tr>
+          <tr class="mb-2">
+            <td>
+              <h4>
+                <a href="#" data-target="#modal-goal-add" style="margin:auto;" class="related" data-toggle="modal">
+                  Data Analysts
+                </a>
+              </h4>
+            </td>
+            <td>
+              <p>Audience</p>
+            </td>
+          </tr>
+          <tr class="mb-2">
+            <td>
+              <h4>
+                <a href="#" data-target="#modal-goal-add" style="margin:auto;" class="related" data-toggle="modal">
+                  Diabetes Coach
+                </a>
+              </h4>
+            </td>
+            <td>
+              <p>Speciality</p>
+            </td>
+          </tr>
+          <tr class="mb-2">
+            <td>
+              <h4>
+                <a href="#" data-target="#modal-goal-add" style="margin:auto;" class="related" data-toggle="modal">
+                  Exercise Center
+                </a>
+              </h4>
+            </td>
+            <td>
+              <p>Setting</p>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+        <!-- #endregion -->
+      </div>
+      <!-- #endregion -->
+    </div>
+  </div>
+</div>
 
-           <!-- <div class="px-4">
-              <div class="badge badge-info">Fire
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="badge badge-info">Safety
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-            </div>-->
-
-            <h5 class="px-4 mt-3">Tag Type</h5>
-            <div class="mx-4">
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="customCheckDisabled1" disabled>
-                <label class="custom-control-label" for="customCheckDisabled1">Audience</label>
-              </div>
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="customCheckDisabled1" disabled>
-                <label class="custom-control-label" for="customCheckDisabled1">Setting</label>
-              </div>
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="customCheckDisabled1" disabled>
-                <label class="custom-control-label" for="customCheckDisabled1">Speciality</label>
-              </div>
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="customCheckDisabled1" disabled>
-                <label class="custom-control-label" for="customCheckDisabled1">Subject</label>
-              </div>
-
-
-              <h6 class="mt-3">Taggable Items</h6>
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="customCheckDisabled1" disabled>
-                <label class="custom-control-label" for="customCheckDisabled1">Select All</label>
-              </div>
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="customCheckDisabled1" disabled>
-                <label class="custom-control-label" for="customCheckDisabled1">
-                  <i class="fa fa-book" ></i >
-                  Courses</label>
-              </div>
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="customCheckDisabled1" disabled>
-                <label class="custom-control-label" for="customCheckDisabled1">
-                  <i class="fa fa-list-alt"></i>
-                  Course Bundles</label>
-              </div>
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="customCheckDisabled1" disabled>
-                <label class="custom-control-label" for="customCheckDisabled1">
-                  <i class="fa fa-book"></i>
-                  Curricula
-                </label>
-              </div>
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="customCheckDisabled1" disabled>
-                <label class="custom-control-label" for="customCheckDisabled1">
-                  <i class="fa fa-check-square-o"></i>
-                  Equivalents</label>
-              </div>
-              <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="customCheckDisabled1" disabled>
-              <label class="custom-control-label" for="customCheckDisabled1">
-                <i class="fa fa-book"></i>
-                Moc Curriculum</label>
-              </div>
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="customCheckDisabled1" disabled>
-                <label class="custom-control-label" for="customCheckDisabled1">
-                  <i class="fa fa-user-md"></i>
-                  Live Classroom
-                </label>
-              </div>
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="customCheckDisabled1" disabled>
-                <label class="custom-control-label" for="customCheckDisabled1">
-                  <i class="fa fa-user-md"></i>
-                  Profile Actvities</label>
-              </div>
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="customCheckDisabled1" disabled>
-                <label class="custom-control-label" for="customCheckDisabled1">
-                  <i class="fa fa-user-md"></i>
-                  Simulation Topic
-                </label>
-              </div>
-            </div>
-          </section>
+<div id="modal-goal-add" class="modal fade" tabindex="-1" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-        <!-- #endregion -->
-        <!-- #region Main section search and results -->
-        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5" role="main">
-          <div class="input-group mb-3">
+        <div class="modal-body">
 
 
-            <input type="text" class="form-control search-bar" aria-label="Text input with dropdown button">
-            <div class="input-group-append">
-              <button class="btn border btn-success" type="button" id="button-addon2">
-              <i class="fa fa-search"></i>
-            </button>
-            </div>
-          </div>
-
-          <div class="row flex-xl-nowrap">
-
-            <!-- #region search results table -->
-            <table class="course-table table table-striped">
-              <thead>
-                <tr class="mb-2">
-                  <th scope="col">Custom Tag</th>
-                  <th scope="col">Type</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="mb-2">
-                  <td>
-                    <h4>
-                      <a href="#"> ACME Initiatives</a></h4>
-                  </td>
-                  <td>
-                    <p>Subject</p>
-                  </td>
-                </tr>
-                <tr class="mb-2">
-                  <td>
-                    <h4>
-                      <a href="#"> Administration</a></h4>
-                  </td>
-                  <td>
-                    <p>Audience</p>
-                  </td>
-                </tr>
-                <tr class="mb-2">
-                  <td>
-                    <h4>
-                      <a href="#"> Bedside+ Initiative</a></h4>
-                  </td>
-                  <td>
-                    <p>Subject</p>
-                  </td>
-                </tr>
-                <tr class="mb-2">
-                  <td>
-                    <h4>
-                      <a href="#"> BedsidePlus Initiative</a></h4>
-                  </td>
-                  <td>
-                    <p>Subject</p>
-                  </td>
-                </tr>
-                <tr class="mb-2">
-                  <td>
-                    <h4>
-                      <a href="#"> CardioThoracic Nursing</a></h4>
-                  </td>
-                  <td>
-                    <p>Speciality</p>
-                  </td>
-                </tr>
-                <tr class="mb-2">
-                  <td>
-                    <h4>
-                      <a href="#"> CardioSim Express</a></h4>
-                  </td>
-                  <td>
-                    <p>Setting</p>
-                  </td>
-                </tr>
-                <tr class="mb-2">
-                  <td>
-                    <h4>
-                      <a href="#"> Data Analysts</a></h4>
-                  </td>
-                  <td>
-                    <p>Audience</p>
-                  </td>
-                </tr>
-                <tr class="mb-2">
-                  <td>
-                    <h4>
-                      <a href="#"> Diabetes Coach</a></h4>
-                  </td>
-                  <td>
-                    <p>Speciality</p>
-                  </td>
-                </tr>
-
-                <tr class="mb-2">
-                  <td>
-                    <h4>
-                      <a href="#"> Exercise Center</a></h4>
-                  </td>
-                  <td>
-                    <p>Setting</p>
-                  </td>
-                </tr>
-
-                <tr class="mb-2">
-                  <td>
-                    <h4>
-                      <a href="#"> ACME Initiatives</a></h4>
-                  </td>
-                  <td>
-                    <p>Subject</p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <!-- #endregion -->
-          </div>
-        </main>
-        <!-- #endregion -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
       </div>
     </div>
-
-    <!-- Bootstrap core JavaScript ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="assets/js/vendor/jquery.slim.min.js"></script>
-    <script src="assets/js/vendor/popper.min.js"></script>
-    <script src="assets/js/vendor/bootstrap.min.js"></script>
-    <script src="assets/js/vendor/bootnavbar.js"></script>
-    <script src="assets/js/vendor/datatables.min.js"></script>
-
-
-    <script src="assets/js/app.js"></script>
+  </div>
+            </div>
+          </section>
+<!-- Bootstrap core JavaScript ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/vendor/jquery.slim.min.js"></script>
+<script src="assets/js/vendor/popper.min.js"></script>
+<script src="assets/js/vendor/bootstrap.min.js"></script>
+<script src="assets/js/vendor/bootnavbar.js"></script>
+<script src="assets/js/vendor/datatables.min.js"></script>
+<script src="assets/js/app.js"></script>
 <script>
-  $(function() {
+  $(function () {
     $('#main_navbar').bootnavbar();
   })
 </script>
-  </body>
-
+</body>
 </html>

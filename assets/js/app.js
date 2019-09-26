@@ -16,11 +16,11 @@ $("document").ready(function () {
       saveState: true,
       ordering: true,
      // orderable: [[1, false]],
-      "dom": '<"container-fluid px-0 d-flex mt-3" <"col-6" li> <"col-6"f>>t<"row py-2 text-white bg-secondary px-3 d-flex align-items-center"  <"d-flex mr-auto" i><"d-flex" p><"ml-auto" B>>',
+      "dom": '<"container-fluid px-0 d-flex mt-3" <"col-6" li> <"col-6"f>>t<"row py-2 text-white px-3 d-flex align-items-center"  <"d-flex" i><"d-flex ml-auto" p><"ml-auto" B>>',
       fixedHeader: {
         header: true
       },
-      lengthMenu: [[5, 10, 25, 50, -1], ["5", "10", "25", "50", "All"]],
+      lengthMenu: [[10, 25, 50, -1], ["10", "25", "50", "All"]],
       paging: true,
       columnDefs: [
         {width: "80%", targets: 0, order: true },
