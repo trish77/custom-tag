@@ -32,4 +32,30 @@ $("document").ready(function () {
       },
       buttons: { buttons: [ { extend: 'collection', text: '<i class="fa fa-download pointer"> <span class="sans">Download</span></i>', className: 'pointer', buttons: [ 'pdf', 'excel', 'csv' ] } ] }
     });
+
+
+    var theContent1 = $("#tag-info"),
+        theContent2 = $("#tag-merge"),
+        mergeBtn = $(".merge-into"),
+        mergeConfirm = $("#tag-confirm"),
+        mergeItBtn = $(".merge-it"),
+        cancelBtn = $(".cancel");
+
+    mergeBtn.on("click", function () {
+      theContent1.addClass("d-none");
+      theContent2.removeClass("d-none");
+    });
+
+    cancelBtn.on("click", function () {
+      theContent1.removeClass("d-none");
+      theContent2.addClass("d-none");
+    });
+
+    mergeItBtn.on("click", function () {
+      mergeConfirm.removeClass("d-none");
+      theContent2.addClass("d-none");
+    });
+
+
+
 });

@@ -39,7 +39,7 @@
 .course-table {
   h4 {
     color: $cyan;
-    font-size: 1rem;
+    font-size: .89rem;
     font-weight: 600;
   }
   a {
@@ -52,6 +52,10 @@
   i {
     font-size: 1.2rem;
   }
+  td {
+    vertical-align: middle;
+    padding: .4rem;
+  }
 
 }
 .btn-accent, .btn-danger, .btn-default, .btn-focus, .btn-info, .btn-inverse, .btn-primary, .btn-success, .btn-warning {
@@ -60,9 +64,46 @@
   box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075);
 }
 
-.btn-default:focus, .btn-default:hover {
-  background-color: #e0e0e0 !important;
 
+.btn-default {
+  background-image: -webkit-linear-gradient(top,#fff 0,#e0e0e0 100%);
+  background-image: linear-gradient(to bottom,#fff 0,#e0e0e0 100%);
+  text-shadow: 0 1px 0 #fff;
+  border-color: #ccc;
+
+  &:hover, &:active, &:focus {
+    color: #333;
+    background-color: #e0e0e0;
+    background-image: none;
+    border-color: #adadad;
+  }
+}
+
+
+.btn-success {
+  background-image: -webkit-linear-gradient(top, #5cb85c 0, #419641 100%);
+  background-image: linear-gradient(to bottom, #5cb85c 0, #419641 100%);
+  border-color: #3e8f3e;
+
+  &:hover, &:active, &:focus {
+    color: #fff;
+    background-color: #47a447;
+    background-image: none;
+    border-color: #398439;
+  }
+}
+
+.btn-danger {
+  background-image: -webkit-linear-gradient(top, #d9534f 0, #c12e2a 100%);
+  background-image: linear-gradient(to bottom, #d9534f 0, #c12e2a 100%);
+  border-color: #b92c28;
+
+  &:hover, &:active, &:focus {
+    color: #fff;
+    background-color: #d2322d;
+    background-image: none;
+    border-color: #ac2925;
+  }
 }
 
 .border-bottom-2 {
@@ -99,6 +140,11 @@
   font-size: .85rem;
 }
 
+.modal-footer {
+  padding: 1rem 0;
+  justify-content: flex-start !important;
+}
+
 #main_navbar {
   .nav-link {
     padding: .6rem !important;
@@ -132,6 +178,7 @@
   }
 
   .dataTables_length, .dataTables_filter {
+    color: $dkgrey;
     > label {
       display: inline-flex !important;
 
@@ -151,6 +198,7 @@
 
   .dataTables_info {
     padding-top: 0 !important;
+    color: $dkgrey;
   }
 
 }

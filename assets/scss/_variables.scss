@@ -1,1 +1,13 @@
-// Variables
+
+.modal-header-bg {
+  @extend .modal-header;
+    background-color: #f3f3f3;
+    color: #555;
+}
+
+.modal-header-border {
+  @extend .modal-header;
+  border-top: 3px solid #09c;
+  border-bottom: 1px solid #ccc;
+}
+

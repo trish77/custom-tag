@@ -1,23 +1,28 @@
 <!doctype html>
 <html lang="en">
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link rel="icon" href="favicon.ico">
-  <title>View Custom Tags</title>
-  <!-- Icons for this template -->
-  <link href="assets/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="assets/css/app.css" type="text/css">
-  <link rel="stylesheet" href="assets/css/datatables.min.css" type="text/css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-</>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="favicon.ico">
+<title>View Custom Tags</title>
+<!-- Icons for this template -->
+<link href="assets/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<!-- Stylesheet -->
+<link rel="stylesheet" href="assets/css/app.css" type="text/css">
+<link rel="stylesheet" href="assets/css/datatables.min.css" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+<script src="assets/js/vendor/jquery.slim.min.js"></script>
+<script src="assets/js/vendor/popper.min.js"></script>
+<script src="assets/js/vendor/bootstrap.min.js"></script>
+<script src="assets/js/vendor/bootnavbar.js"></script>
+<script src="assets/js/vendor/datatables.min.js"></script>
+<script src="assets/js/vendor/jquery.tagselect.js"></script>
+<script src="assets/js/app.js"></script>
 <body>
 <div class="head-back"></div>
 <div class="container-fluid">
-  <div class="row mt-1 title mb-1 border-bottom border-secondary border-bottom-2 flex-xl-nowrap">
+  <div class="row mt-4 title mb-1 border-bottom border-secondary border-bottom-2 flex-xl-nowrap">
     <div class="col-6">
       <h3>View Custom Tags</h3>
     </div>
@@ -144,7 +149,7 @@
           <tr class="mb-2">
             <td>
               <h4>
-                <a .dt-bootstrap4 .dataTables_infohref="#" data-target="#modal-goal-add" style="margin:auto;" class="related" data-toggle="modal">
+                <a href="#" data-target="#modal-goal-add" style="margin:auto;" class="related" data-toggle="modal">
                   ACME Initiatives
                 </a>
               </h4>
@@ -249,6 +254,30 @@
               <p>Setting</p>
             </td>
           </tr>
+          <tr class="mb-2">
+            <td>
+              <h4>
+                <a href="#" data-target="#modal-goal-add" style="margin:auto;" class="related" data-toggle="modal">
+                  Data Analysts
+                </a>
+              </h4>
+            </td>
+            <td>
+              <p>Audience</p>
+            </td>
+          </tr>
+          <tr class="mb-2">
+            <td>
+              <h4>
+                <a href="#" data-target="#modal-goal-add" style="margin:auto;" class="related" data-toggle="modal">
+                  ACME Initiatives
+                </a>
+              </h4>
+            </td>
+            <td>
+              <p>Subject</p>
+            </td>
+          </tr>
           </tbody>
         </table>
         <!-- #endregion -->
@@ -257,40 +286,122 @@
     </div>
   </div>
 </div>
-
 <div id="modal-goal-add" class="modal fade" tabindex="-1" aria-hidden="true" style="display: none;">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" id="tag-info">
+      <div class="modal-header modal-header-bg modal-header-border">
+        <h5 class="modal-title">Tag Information
+          </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="tag-input">Enter Tag Name</label>
+          <input type="text" class="form-control" id="tag-input" aria-describedby="tag-input"
+                 placeholder="Enter Tag Info">
         </div>
-        <div class="modal-body">
-
-
+        <div class="default">
+          <h4>Learning Items</h4>
+          <div>Course: 2020 Vision for ACME HealthCare</div>
+          <div>Course: Advancing our Mission</div>
+          <div>Course: Before the Next Patient Leaves</div>
+          <div>Course: Culture and Community: Your Place in Making a Positive and Lasting Difference at ACME</div>
+          <h4 class="pt-3">Group Assignments</h4>
+          <div>2020 Vision for ACME HealthCare - All Employees</div>
+          <div>2020 Vision for ACME HealthCare - New Hires 2019</div>
+          <div>2020 Vision for ACME HealthCare - New Hires 2020</div>
+          <div>Executive Leadership Assignment</div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-success">Save</button>
+          <button type="button" class="btn btn-default merge-into">Merge into Another Tag</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger ml-auto" data-dismiss="modal">Delete</button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- second step -->
+    <div class="modal-content d-none" id="tag-merge">
+      <div class="modal-header modal-header-bg modal-header-border">
+        <h5 class="modal-title">Merge Tag into Another Tag</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="default">
+          <h4>Acme Initiatives</h4>
+          <p>
+            Merge Tag into Another Tag
+            Search for the tag to merge "ACME Initiative" into. All items tagged with [edited-tag] will be tagged with the tag selected below.</p>
+          <label for="tag-input">Select the dropdown, find your tag and then select one</label>
+          <div class="qtagselect isw360">
+            <select class="qtagselect__select" multiple>
+              <option value="2" class="isgreen" selected>Similar</option>
+              <option value="3" class="isgreen" >This One</option>
+              <option value="4" class="isgreen">How about this one</option>
+              <option value="5" class="isgreen">HSTM</option>
+              <option value="6" class="isgreen"> Course</option>
+              <option value="7" class="isgreen">Some test</option>
+              <option value="8" class="isgreen">ACME</option>
+              <option value="9" class="isgreen">Org option</option>
+
+
+              <option value="12" class="isblue">Tag 1 meta</option>
+              <option value="13" class="isblue">Metadata</option>
+              <option value="14" class="isblue">Data Meta</option>
+              <option value="15" class="isblue">Some Construct</option>
+              <option value="16" class="isblue">Wow</option>
+
+              <option value="10" class="isgrey">My Tag</option>
+              <option value="1" class="isgrey" >Custom 1</option>
+              <option value="1" class="isgrey" >Custom Tag</option>
+              <option value="1" class="isgrey" >Good Tag</option>
+              <option value="1" class="isgrey" >Bad Tag</option>
+            </select>
+          </div>
+
+          <h4 class="pt-3">Merge Into</h4>
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-default merge-it">Merge</button>
+        <button type="button" class="btn btn-default cancel">Cancel</button>
+      </div>
+      </div>
+
+    </div>
+
+    <div class="modal-content d-none" id="tag-confirm">
+      <div class="modal-header modal-header-bg modal-header-border">
+        <h5 class="modal-title">Merge these two tags?
+        </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="default">
+          <p>Items tagged with [edited-tag] will be tagged with [target-tag]. This action cannot be undone.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Yes Merge These Tags</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
         </div>
       </div>
     </div>
   </div>
-            </div>
-          </section>
+</div>
 <!-- Bootstrap core JavaScript ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="assets/js/vendor/jquery.slim.min.js"></script>
-<script src="assets/js/vendor/popper.min.js"></script>
-<script src="assets/js/vendor/bootstrap.min.js"></script>
-<script src="assets/js/vendor/bootnavbar.js"></script>
-<script src="assets/js/vendor/datatables.min.js"></script>
-<script src="assets/js/app.js"></script>
+
 <script>
   $(function () {
-    $('#main_navbar').bootnavbar();
+    $('.qtagselect__select').tagselect();
   })
 </script>
 </body>
